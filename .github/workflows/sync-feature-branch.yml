@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Merge main into feature
         run: |
           git fetch origin
-          git checkout second fetch-depth: 0
+          git checkout second
           git rebase origin/main
           git push -f origin second
