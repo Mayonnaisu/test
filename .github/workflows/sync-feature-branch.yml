@@ -10,6 +10,6 @@ jobs:
       - name: Merge main into feature
         run: |
           git fetch origin
-          git checkout second
+          git checkout second fetch-depth: 0
           git rebase origin/main
           git push -f origin second
