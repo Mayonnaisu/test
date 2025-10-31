@@ -11,5 +11,5 @@ jobs:
         run: |
           git fetch origin
           git checkout second
-          git rebase origin/main --no-edit
+          git rebase origin/main
           git push -f origin second
