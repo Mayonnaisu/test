@@ -30,5 +30,6 @@ jobs:
       - name: Super-linter
         uses: super-linter/super-linter@v8.2.1 # x-release-please-version
         env:
+          LOG_LEVEL: DEBUG
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
