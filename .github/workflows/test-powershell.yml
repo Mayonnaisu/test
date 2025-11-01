@@ -1,0 +1,21 @@
+name: Run PowerShell Script
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: windows-latest # or ubuntu-latest if using PowerShell Core
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run PowerShell script
+      shell: powershell # 'pwsh' or 'powershell' for Windows PowerShell on Windows runners
+      run: |
+        # You can place your inline PowerShell code here
+        Write-Host "Hello from PowerShell!"
+        
+        # Or, execute a script file from your repository
+        .\MIT-installer.ps1
